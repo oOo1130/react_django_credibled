@@ -274,25 +274,14 @@ function ReferenceStatus() {
   };
 
   const exportPDF = () => {
-    html2canvas(document.querySelector("#resultsCapture")).then((canvas) => {
-      var imgData = canvas.toDataURL("image/png");
-      var imgWidth = 210;
-      var pageHeight = 295;
-      var imgHeight = (canvas.height * imgWidth) / canvas.width;
-      var heightLeft = imgHeight;
-      var doc = new jsPDF("p", "mm");
-      var position = 25; // top padding to first page
-      doc.addImage(logo, "PNG", 10, 10);
-      doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-
-      while (heightLeft >= 0) {
-        position += heightLeft - imgHeight; // top padding for other pages
-        doc.addPage();
-        doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
+    var doc = new jsPDF("p", "pt", "a4");
+    var pagesize = doc.internal.pageSize;
+    console.log(pagesize.width);
+    doc.html(document.querySelector('#resultsCapture'), {
+      margin: [40,60,40,60],
+      callback: function(pdf) {
+        pdf.save("credibled_report.pdf");
       }
-      doc.save("credibled_report.pdf");
     });
   };
 
@@ -487,8 +476,9 @@ function ReferenceStatus() {
               </div>
             </div>
           </nav>
-          <div className="content" id="resultsCapture">
-            <div className="container-fluid">
+          <div className="content row" id="resultsCapture" style={{ width: "fit-content" }}>
+            <div className="col-md-1"> </div>
+            <div className="container-fluid col-md-10">
               <div className="card-plain">
                 <div className="card-body">
                   <div className="row">
@@ -1440,6 +1430,7 @@ function ReferenceStatus() {
                 {/* <!-- your footer here --> */}
               </footer>
             </div>
+            <div className="col-md-1"> </div>
           </div>
         </div>
       </div>
