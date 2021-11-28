@@ -1,0 +1,20 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: 'Build and Test'
+          script:
+            - echo "Your build and test goes here..."
+      - step:
+          name: 'Updation'
+          script:
+            - echo "Pulling Latest code from the git"
+            - ssh $CREDIBLED_PROD_SERVER_USER@$CREDIBLED_PROD_SERVER "cd credibled_app && git pull"
+            - ssh $CREDIBLED_PROD_SERVER_USER@$CREDIBLED_PROD_SERVER "docker rm -f frontend && docker rmi frontend"
+      - step:
+          name: 'Deployment'
+          script:
+            - ssh $CREDIBLED_PROD_SERVER_USER@$CREDIBLED_PROD_SERVER "cd compose && docker-compose up -d frontend"
+            - echo "Application deployed successfully"
