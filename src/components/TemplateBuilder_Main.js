@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 import ReactDOM from "react-dom";
 import { useCookies } from "react-cookie";
 import logo from "../assets/img/credibled_logo_205x45.png";

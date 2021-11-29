@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import logo from "../assets/img/credibled_logo_205x45.png";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/styles";
 import Slider from "@material-ui/core/Slider";
 import { API } from "../Api";
 
