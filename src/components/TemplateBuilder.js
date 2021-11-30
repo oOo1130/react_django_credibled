@@ -27,7 +27,7 @@ function TB_Homepage() {
   const [loginUser, setLoginUser] = useState("");
   const [industry, setIndustry] = useState("");
   const [jobTitle, setJobTitle] = useState("");
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");

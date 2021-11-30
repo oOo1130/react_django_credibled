@@ -25,7 +25,7 @@ var timeOutVar;
 // }));
 
 function JobSummary() {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [openRating, setOpenRating] = useState(false);
   const params = useParams();
@@ -290,7 +290,6 @@ function JobSummary() {
                         <Modal
                           aria-labelledby="transition-modal-title"
                           aria-describedby="transition-modal-description"
-                          className={classes.modal}
                           open={open}
                           onClose={handleClose}
                           closeAfterTransition
@@ -300,7 +299,7 @@ function JobSummary() {
                           }}
                         >
                           <Fade in={open}>
-                            <div className={classes.paper}>
+                            <div >
                               <div class="modal-body text-center">
                                 <div class="row">
                                   <div class="col">
@@ -337,7 +336,6 @@ function JobSummary() {
                         <Modal
                           aria-labelledby="transition-modal-title"
                           aria-describedby="transition-modal-description"
-                          className={classes.modal}
                           open={openRating}
                           onClose={handleRatingClose}
                           closeAfterTransition
@@ -347,7 +345,7 @@ function JobSummary() {
                           }}
                         >
                           <Fade in={open}>
-                            <div className={classes.paper}>
+                            <div >
                               <div class="modal-body text-center">
                                 <div class="row">
                                   <div class="col">

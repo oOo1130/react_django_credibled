@@ -29,7 +29,7 @@ function TemplateBuilder() {
   // const [jobTitle, setJobTitle] = useState("");
   const [competency, setCompetency] = useState([]);
   const [questions, setQuestions] = useState([]);
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const getCookie = (name) => {
     var cookieArr = document.cookie.split(";");
