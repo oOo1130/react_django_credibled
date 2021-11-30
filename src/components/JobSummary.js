@@ -290,6 +290,7 @@ function JobSummary() {
                         <Modal
                           aria-labelledby="transition-modal-title"
                           aria-describedby="transition-modal-description"
+                          // className={classes.modal}
                           open={open}
                           onClose={handleClose}
                           closeAfterTransition
@@ -300,6 +301,7 @@ function JobSummary() {
                         >
                           <Fade in={open}>
                             <div >
+                            {/* <div className={classes.paper}> */}
                               <div class="modal-body text-center">
                                 <div class="row">
                                   <div class="col">
@@ -336,6 +338,7 @@ function JobSummary() {
                         <Modal
                           aria-labelledby="transition-modal-title"
                           aria-describedby="transition-modal-description"
+                          // className={classes.modal}
                           open={openRating}
                           onClose={handleRatingClose}
                           closeAfterTransition
@@ -346,6 +349,7 @@ function JobSummary() {
                         >
                           <Fade in={open}>
                             <div >
+                            {/* <div className={classes.paper}> */}
                               <div class="modal-body text-center">
                                 <div class="row">
                                   <div class="col">
