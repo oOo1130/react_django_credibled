@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
 import { useCookies } from "react-cookie";
 import Chip from "@material-ui/core/Chip";
 import { API } from "../Api";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    color: "white",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(0.5),
-    },
-  },
-  chip: {
-    color: "white",
-    margin: theme.spacing.unit / 2,
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: "flex",
+//     color: "white",
+//     justifyContent: "center",
+//     flexWrap: "wrap",
+//     "& > *": {
+//       margin: theme.spacing(0.5),
+//     },
+//   },
+//   chip: {
+//     color: "white",
+//     margin: theme.spacing.unit / 2,
+//   },
+// }));
 
 function TB_Homepage() {
   const params = useParams();

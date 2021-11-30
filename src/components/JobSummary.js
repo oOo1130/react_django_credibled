@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import logo from "../assets/img/credibled_logo_205x45.png";
 import { API } from "../Api";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import { detectBrowser, getDate, detectCountryISO } from "../Common";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -10,19 +10,19 @@ import Fade from "@material-ui/core/Fade";
 import Rating from "@material-ui/lab/Rating";
 
 var timeOutVar;
-const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: 10,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   modal: {
+//     display: "flex",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+//   paper: {
+//     backgroundColor: theme.palette.background.paper,
+//     borderRadius: 10,
+//     boxShadow: theme.shadows[5],
+//     padding: theme.spacing(2, 4, 3),
+//   },
+// }));
 
 function JobSummary() {
   const classes = useStyles();

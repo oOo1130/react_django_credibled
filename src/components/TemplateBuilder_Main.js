@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import ReactDOM from "react-dom";
 import { useCookies } from "react-cookie";
 import logo from "../assets/img/credibled_logo_205x45.png";
 import { API } from "../Api";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    color: "white",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(0.5),
-    },
-  },
-  chip: {
-    color: "white",
-    margin: theme.spacing.unit / 2,
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: "flex",
+//     color: "white",
+//     justifyContent: "center",
+//     flexWrap: "wrap",
+//     "& > *": {
+//       margin: theme.spacing(0.5),
+//     },
+//   },
+//   chip: {
+//     color: "white",
+//     margin: theme.spacing.unit / 2,
+//   },
+// }));
 
 function TemplateBuilder() {
   // const params = useParams();
